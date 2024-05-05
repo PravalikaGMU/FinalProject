@@ -1,0 +1,10 @@
+"0","#K-Nearest Neighbours"
+"0","#I will make a new dataframe excluding id, and marriage from analysis for KNN."
+"0",""
+"0","credit01 <- data %>%"
+"0","  select(-ID, -MARRIAGE)"
+"0","#predictors from training data"
+"0","train.default <- data$default_payment_next_month[train]"
+"2","Error in `[.default`(data$default_payment_next_month, train) : 
+  invalid subscript type 'closure'
+"

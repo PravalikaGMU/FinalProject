@@ -1,0 +1,4 @@
+"0","ggplot(data = data, mapping = aes(x=AGE, y=LIMIT_BAL))+"
+"0","  geom_point()+"
+"0","  geom_smooth(aes(color = EDUCATION))+"
+"0","  facet_wrap(~EDUCATION)"

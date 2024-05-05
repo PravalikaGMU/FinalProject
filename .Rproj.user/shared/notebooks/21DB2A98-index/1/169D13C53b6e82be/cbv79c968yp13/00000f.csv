@@ -1,0 +1,4 @@
+"0","train.default <- data$default_payment_next_month[train]"
+"2","Error in data$default_payment_next_month[train] : 
+  invalid subscript type 'closure'
+"

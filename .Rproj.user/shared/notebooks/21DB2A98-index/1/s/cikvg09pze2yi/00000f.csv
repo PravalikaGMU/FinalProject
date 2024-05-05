@@ -1,0 +1,6 @@
+"0","# check Null/NA value"
+"0","sum(is.na(data)) # no missing value!"
+"1","[1]"
+"1"," 0"
+"1","
+"
