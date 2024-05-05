@@ -3,14 +3,14 @@ title: "FinalProject"
 ---
 
 ```{r}
-library(readxl) #read Excel file
-library(Hmisc)
-library(MASS) #LDA, QDA
-library(class) #KNN
-library(ggplot2) #visualization
-library(dplyr) #data wrangling
-library(stringr)
-library(caret)
+#library(readxl) #read Excel file
+l#ibrary(Hmisc)
+#library(MASS) #LDA, QDA
+#library(class) #KNN
+#library(ggplot2) #visualization
+#library(dplyr) #data wrangling
+#library(stringr)
+#library(caret)
 ```
 
 ```{r}

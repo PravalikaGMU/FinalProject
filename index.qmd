@@ -3,14 +3,14 @@ title: "FinalProject"
 ---
 
 ```{r}
-library(readxl) #read Excel file
-library(Hmisc)
-library(MASS) #LDA, QDA
-library(class) #KNN
-library(ggplot2) #visualization
-library(dplyr) #data wrangling
-library(stringr)
-library(caret)
+#library(readxl) #read Excel file
+l#ibrary(Hmisc)
+#library(MASS) #LDA, QDA
+#library(class) #KNN
+#library(ggplot2) #visualization
+#library(dplyr) #data wrangling
+#library(stringr)
+#library(caret)
 ```
 
 ```{r}
@@ -28,6 +28,7 @@ if (!is.data.frame(data)) {
   data <- as.data.frame(data)
 }
 
+
 colnames(data) <- col_names
 head(data)
 
@@ -36,6 +37,8 @@ head(data)
 ```{r}
 # check Null/NA value
 sum(is.na(data)) # no missing value!
+data <- data %>%
+  rename(default_payment_next_month = `default payment next month`)
 
 ```
 
@@ -107,22 +110,16 @@ full.glm.summary
 ```
 
 ```{r}
-#K-Nearest Neighbours
-#I will make a new dataframe excluding id, and marriage from analysis for KNN.
-
 credit01 <- data %>%
   select(-ID, -MARRIAGE)
-#predictors from training data
-train.default <- data$default_payment_next_month[train]
 
-knn.pred <- knn(credit.train, credit.test, train.default, k=1)
-table(knn.pred, credit.test$default_payment_next_month)
-
-mean(knn.pred != credit.test$default_payment_next_month)
 
 
 ```
 
 ```{r}
+train.default <- data$default_payment_next_month[train]
 
+knn.pred <- knn(credit.train, credit.test, train.default, k=1)
+table(knn.pred, credit.test$default_payment_next_month)
 ```
